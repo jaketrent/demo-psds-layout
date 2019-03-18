@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ViewToggle from '@pluralsight/ps-design-system-viewtoggle/react'
+import React, { useState } from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+import './app.css'
+import pageHeading from './page-heading.js'
+import aside from './aside.js'
+import equalColumn from './equal-column.js'
+
+const layouts = [
+  {
+    name: 'Page heading',
+    layout: pageHeading
+  },
+  {
+    name: 'Aside',
+    layout: aside
+  },
+  {
+    name: 'Equal column',
+    layout: equalColumn
   }
-}
+]
 
-export default App;
+export default function App() {
+  const [layoutI, setLayout] = useState(0)
+  const Layout = layouts[layoutI].layout
+  return (
+    <div className="App">
+      <ViewToggle onSelect={setLayout}>
+        {layouts.map((layout, i) => (
+          <ViewToggle.Option active={i === layoutI}>
+            {layout.name}
+          </ViewToggle.Option>
+        ))}
+      </ViewToggle>
+      <Layout />
+    </div>
+  )
+}
