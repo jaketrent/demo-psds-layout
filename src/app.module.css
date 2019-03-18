@@ -1,0 +1,10 @@
+.app {
+}
+.toggle {
+  text-align: center;
+  padding: var(--psLayoutSpacingLarge) 0;
+  border-bottom: 1px solid var(--psColorsGray03);
+  margin-bottom: var(--psLayoutSpacingMedium);
+}
+.layout {
+}
