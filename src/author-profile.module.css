@@ -1,0 +1,9 @@
+.profile {
+  padding: 0 var(--psLayoutSpacingLarge);
+}
+.tags {
+}
+.tag {
+  display: inline-block;
+  margin: 0 var(--psLayoutSpacingXXSmall) var(--psLayoutSpacingXXSmall) 0;
+}
