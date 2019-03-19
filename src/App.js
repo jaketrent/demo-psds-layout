@@ -2,12 +2,17 @@ import ViewToggle from '@pluralsight/ps-design-system-viewtoggle/react'
 import React, { useState } from 'react'
 import styleable from 'react-styleable'
 
-import * as css from './app.module.css'
-import pageHeading from './page-heading.js'
 import aside from './aside.js'
+import * as css from './app.module.css'
 import equalColumn from './equal-column.js'
+import intro from './intro.js'
+import pageHeading from './page-heading.js'
 
 const layouts = [
+  {
+    name: 'Layout',
+    layout: intro
+  },
   {
     name: 'Page heading',
     layout: pageHeading

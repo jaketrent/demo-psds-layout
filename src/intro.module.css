@@ -1,0 +1,13 @@
+.intro {
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+.points {
+  padding: var(--psLayoutSpacingLarge);
+}
+.points li {
+  font-size: 2em;
+  line-height: 2em;
+}
