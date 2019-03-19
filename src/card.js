@@ -6,7 +6,7 @@ import css from './card.module.css'
 
 export default styleable(css)(function Card(props) {
   return (
-    <div className={props.css.card}>
+    <div className={props.css.card} {...props}>
       <Card
         size={Card.sizes.medium}
         title={<Card.Title>Super Course!</Card.Title>}
