@@ -1,9 +1,6 @@
-.app {
-}
-.toggle {
+.tabs {
   text-align: center;
-  padding: var(--psLayoutSpacingLarge) 0;
-  border-bottom: 1px solid var(--psColorsGray03);
+  padding: 0 var(--psLayoutSpacingLarge);
   margin-bottom: var(--psLayoutSpacingMedium);
 }
 .layout {

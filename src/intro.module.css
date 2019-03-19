@@ -3,6 +3,11 @@
   width: 500px;
   max-width: 100%;
 }
+.title {
+  font-size: 2em;
+  text-shadow: 0 4px 0 var(--psColorsOrange), 0 7px 0 var(--psColorsPink);
+  font-weight: 800;
+}
 
 .points {
   padding: var(--psLayoutSpacingLarge);

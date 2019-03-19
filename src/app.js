@@ -1,6 +1,6 @@
-import ViewToggle from '@pluralsight/ps-design-system-viewtoggle/react'
 import React, { useState } from 'react'
 import styleable from 'react-styleable'
+import Tab from '@pluralsight/ps-design-system-tab/react'
 
 import aside from './aside.js'
 import * as css from './app.module.css'
@@ -10,7 +10,7 @@ import pageHeading from './page-heading.js'
 
 const layouts = [
   {
-    name: 'Layout',
+    name: 'Intro',
     layout: intro
   },
   {
@@ -34,23 +34,28 @@ export default styleable(css)(function App(props) {
   const Layout = layouts[layoutI].layout
   return (
     <div className={props.css.app}>
-      <div className={props.css.toggle}>
-        <ViewToggle
-          onSelect={i => {
-            localStorage.setItem('demo-psds-layout', i)
-            setLayout(i)
-          }}
-        >
+      <div className={props.css.tabs}>
+        <Tab.List>
           {layouts.map((layout, i) => (
-            <ViewToggle.Option active={i === layoutI}>
+            <Tab.ListItem
+              id={layout.name}
+              key={layout.name}
+              onClick={i => {
+                localStorage.setItem('demo-psds-layout', i)
+                setLayout(i)
+              }}
+              active={i === layoutI}
+            >
               {layout.name}
-            </ViewToggle.Option>
+            </Tab.ListItem>
           ))}
-        </ViewToggle>
+        </Tab.List>
       </div>
-      <div className={props.css.layout}>
-        <Layout />
-      </div>
+      <Tab.Panel labelledBy={layouts[layoutI].name} key={layouts[layoutI].name}>
+        <div className={props.css.layout}>
+          <Layout />
+        </div>
+      </Tab.Panel>
     </div>
   )
 })

@@ -8,7 +8,7 @@ import css from './intro.module.css'
 export default styleable(css)(function Intro(props) {
   return (
     <div className={props.css.intro}>
-      <Heading size={Heading.sizes.small}>
+      <Heading className={props.css.title} size={Heading.sizes.xLarge}>
         <h2>Layout component</h2>
       </Heading>
 
