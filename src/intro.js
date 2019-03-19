@@ -15,7 +15,7 @@ export default styleable(css)(function Intro(props) {
       <Link>
         <a
           target="_blank"
-          rel="noreferrer nofollow"
+          rel="noopener noreferrer"
           href="https://design-system.pluralsight.com/components/layout/"
         >
           design-system.pluralsight.com/components/layout
