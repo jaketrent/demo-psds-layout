@@ -23,12 +23,19 @@ const layouts = [
 ]
 
 export default styleable(css)(function App(props) {
-  const [layoutI, setLayout] = useState(0)
+  const [layoutI, setLayout] = useState(
+    parseInt(localStorage.getItem('demo-psds-layout'), 10) || 0
+  )
   const Layout = layouts[layoutI].layout
   return (
     <div className={props.css.app}>
       <div className={props.css.toggle}>
-        <ViewToggle onSelect={setLayout}>
+        <ViewToggle
+          onSelect={i => {
+            localStorage.setItem('demo-psds-layout', i)
+            setLayout(i)
+          }}
+        >
           {layouts.map((layout, i) => (
             <ViewToggle.Option active={i === layoutI}>
               {layout.name}
