@@ -5,12 +5,13 @@ import Tab from '@pluralsight/ps-design-system-tab/react'
 import aside from './aside.js'
 import * as css from './app.module.css'
 import equalColumn from './equal-column.js'
+import finesto from './finesto.js'
 import intro from './intro.js'
 import pageHeading from './page-heading.js'
 
 const layouts = [
   {
-    name: 'Intro',
+    name: 'Hallo',
     layout: intro
   },
   {
@@ -24,6 +25,10 @@ const layouts = [
   {
     name: 'Equal column',
     layout: equalColumn
+  },
+  {
+    name: 'Finesto',
+    layout: finesto
   }
 ]
 

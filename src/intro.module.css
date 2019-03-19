@@ -4,9 +4,10 @@
   max-width: 100%;
 }
 .title {
-  font-size: 2em;
+  margin-top: var(--psLayoutSpacingXLarge);
   text-shadow: 0 4px 0 var(--psColorsOrange), 0 7px 0 var(--psColorsPink);
   font-weight: 800;
+  font-size: 4em;
 }
 
 .points {

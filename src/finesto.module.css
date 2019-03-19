@@ -1,0 +1,5 @@
+.finesto {
+  margin: var(--psLayoutSpacingLarge) auto 0 auto;
+  width: 700px;
+  max-width: 100%;
+}
